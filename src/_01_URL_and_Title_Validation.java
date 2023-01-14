@@ -9,7 +9,6 @@ public class _01_URL_and_Title_Validation {
         Go to https://www.techglobalschool.com
         Get current url and validate it
         Get title and validate it
-
         EXPECTED RESULT:
         URL  = https://www.techglobalschool.com/
         Title = SDET Bootcamp | TechGlobal
@@ -18,7 +17,7 @@ public class _01_URL_and_Title_Validation {
 
 
         // 1. Set up
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ashraf Musleh\\IdeaProjects\\initial_selenium_project_5\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/initial_selenium_project_5/chromedriver");
 
         WebDriver driver = new ChromeDriver();
 

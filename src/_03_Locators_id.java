@@ -4,17 +4,21 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class _03_Locators_id {
-    public static void main(String[] args) throws InterruptedException{
+    public static void main(String[] args) throws InterruptedException {
 
+        /*
+        Go to https://techglobal-training.netlify.app/
+        Validate the company logo is displayed
+         */
 
-        // 1. set up - before actions
+        // 1. Set up - before actions
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Ashraf Musleh\\IdeaProjects\\initial_selenium_project_5\\chromedriver.exe");
 
         WebDriver driver = new ChromeDriver();
 
         driver.manage().window().maximize();
 
-        // 2. Validation
+        // 2. validation - action
         driver.get("https://techglobal-training.netlify.app/");
 
         Thread.sleep(2000);
@@ -22,19 +26,13 @@ public class _03_Locators_id {
         //Locate the logo and validate if it is displayed
         WebElement logo = driver.findElement(By.id("logo"));
 
-        if(logo.isDisplayed()) System.out.println("logo validation PASSED");
-        else System.out.println("logo validation FAILED");
+        if(logo.isDisplayed()) System.out.println("Logo validation PASSED");
+        else System.out.println("Logo validation FAILED");
 
-        System.out.println(logo.isEnabled()); // True
-        System.out.println(logo.isSelected()); // True
+        System.out.println(logo.isEnabled()); // true
+        System.out.println(logo.isSelected()); // false
 
         // 3. Teardown - after actions
         driver.quit();
-
-
-
-
-
-
     }
 }

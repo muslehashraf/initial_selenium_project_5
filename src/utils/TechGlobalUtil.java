@@ -11,11 +11,14 @@ public class TechGlobalUtil {
         driver.get("https://techglobal-training.netlify.app/");
         Waiter.pause(1);
 
-        driver.findElement(By.id("dropdown-button")).click();
+        driver.findElement(By.id("dropdown-button")).click(); //
         Waiter.pause(1);
-
 
         driver.findElement(By.id("frontend-option")).click();
         Waiter.pause(1);
+    }
+
+    public static void clickOnCard(int cardNumber){
+        Driver.getDriver().findElement(By.id("card-" + cardNumber)).click();
     }
 }
